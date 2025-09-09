@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example.bankops</groupId>
+    <artifactId>bank-ops-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>api-server</artifactId>
+  <dependencies>
+    <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-web</artifactId></dependency>
+    <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-validation</artifactId></dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.6.0</version>
+    </dependency>
+    <dependency><groupId>com.example.bankops</groupId><artifactId>common-model</artifactId><version>${project.version}</version></dependency>
+    <dependency><groupId>com.example.bankops</groupId><artifactId>common-spi</artifactId><version>${project.version}</version></dependency>
+    <!-- Install SDKs here to enable them -->
+    <dependency><groupId>com.example.bankops</groupId><artifactId>sdk-qualification-starter</artifactId><version>${project.version}</version></dependency>
+    <dependency><groupId>com.example.bankops</groupId><artifactId>sdk-posting-starter</artifactId><version>${project.version}</version></dependency>
+    <dependency><groupId>com.example.bankops</groupId><artifactId>sdk-fraud-starter</artifactId><version>${project.version}</version></dependency>
+    <dependency><groupId>com.example.bankops</groupId><artifactId>sdk-alert-starter</artifactId><version>${project.version}</version></dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
